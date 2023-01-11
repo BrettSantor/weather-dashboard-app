@@ -2,8 +2,22 @@ var subBut = document.querySelector('#inputForm');
 var tempSlot = document.querySelector('#currTemp');
 var headline = document.querySelector('#topHeader');
 var bod = document.querySelector('#bulk');
+var pastCity = document.querySelector('#pastCity')
 var currCity = {};
 var storeCity = []
+
+function init() {
+    
+    storeCity = JSON.parse(localStorage.getItem("cityObj"));
+
+    if (storeCity === null) {
+    storeCity = [];
+     } else {
+        for(var i = 0; i < storeCity.length; i++){
+            pastCity.createElement('button')
+        }
+     }
+}
 
 function getCurrApi(location){
     var currentWeather = 'https://api.openweathermap.org/data/2.5/weather?q=' + location + '&units=imperial&appid=a85e2d69a404ab1f087da912eb4b924c';
@@ -60,3 +74,4 @@ var forecast = 'https:api.openweathermap.org/data/2.5/forecast?q=' + location + 
       getForApi(location);
 }
 })
+init()
