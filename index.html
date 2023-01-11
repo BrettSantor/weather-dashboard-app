@@ -8,10 +8,19 @@
     <title>What's The Weather?</title>
 </head>
 <body class="container">
-    <header id="topHeader">
-
+    <header id="topHeader" style="text-align: center; padding-bottom: 5px;">
+      <h2 id="currTemp"></h2>
     </header>
-  <main id="landingSpot">
+    <main id="landingSpot" style="display: flex;">
+    <aside class="citySearch" style="width: 25%;">
+      <form id="inputForm">
+      <input id= 'input' type="text" >
+      <button type="submit" class="btn">Enter</button>
+    </form>
+      <table id="pastCity"></table>
+    </aside>
+  <article id="bulk" style="display:flex">
+  </article>
 
   </main>
     
