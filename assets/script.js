@@ -9,7 +9,7 @@ var forCards
 var currCity = {};
 var storeCity = []
 var currDate = dayjs().format('MMMM dddd DD, YYYY')
-// var 
+
 console.log(currDate)
 function init() {
     
@@ -59,7 +59,7 @@ if(forCards){
 }
     fetch(forecast)
         .then(function (rsponse) {
-            console.log(rsponse);
+            
             return rsponse.json();
         })
         .then(function(datr){
@@ -67,12 +67,11 @@ if(forCards){
             console.log(datr.list.length);
          for(var i = 0; i < datr.list.length; i++) {
            datrArr.push(datr.list[i]);
-            // console.log(datrArr)
-            //   console.log(datr.list[i].main)
+           
             
         } console.log(datrArr)
             for(var j = 3; j < datrArr.length; j += 8){
-            //  console.log(datrArr[j]);
+           
             Icon = datrArr[j].weather[0].icon
            cardImg = document.createElement('img')
            cardImg.src = 'http://openweathermap.org/img/wn/'+ Icon + '@2x.png'
@@ -84,8 +83,7 @@ if(forCards){
               unixStamp = datrArr[j].dt;
               forDate = dayjs.unix(unixStamp)
                 dateHead.textContent = forDate.format('ddd DD')
-            //   forCardsp4 = document.createElement('p')
-            //   forCardsp5 = document.createElement('p')
+            
              forCards.classList.add('card');
             forCards.innerHTML = ' Temperature: ' + datrArr[j].main.temp + '\u00B0 F';
              forCardsP1.textContent = ' Humidity: ' + datrArr[j].main.humidity+'%';
@@ -106,7 +104,7 @@ if(forCards){
          var location = event.target[0].value;
             console.log(location);
     if (!storeCity.includes(location)){
-        //fix mispelled city entry
+       
         newbtn = document.createElement('button');
         newbtn.setAttribute('value', location);
         newbtn.textContent = location;

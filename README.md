@@ -12,7 +12,7 @@
 
 ## Description
 
-[Visit the deployed site here](placeholder)
+[Visit the deployed site here](https://brettsantor.github.io/weather-dashboard-app/)
 
 Get the current weather and five day forecast at just the click of a button. This application uses Open Weather Map API to bring you up to date weather information such as the temperature, humidity and more! 
 
