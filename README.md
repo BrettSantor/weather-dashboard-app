@@ -17,14 +17,14 @@
 Get the current weather and five day forecast at just the click of a button. This application uses Open Weather Map API to bring you up to date weather information such as the temperature, humidity and more! 
 
 
-![image of landing page]image link
+![image of landing page](./images/weatherland.png)
 
 
 ## Usage
 
 Check the weather by entering the name of any city. Your city will be saved as a button on the page for next time. The current weather conditions will post to the header of the page and the 5 day forecast will post by day as cards.
 
-![image of weather cards](image link)
+![image of weather cards](./images/weatherfor.png)
 
 ## Learning Points
 
