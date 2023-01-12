@@ -53,7 +53,7 @@ function getCurrApi(location){
 
 function getForApi(location){
     var datrArr = [];
-var forecast = 'https:api.openweathermap.org/data/2.5/forecast?q=' + location + '&cnt=40&units=imperial&appid=a85e2d69a404ab1f087da912eb4b924c';
+var forecast = 'https://api.openweathermap.org/data/2.5/forecast?q=' + location + '&cnt=40&units=imperial&appid=a85e2d69a404ab1f087da912eb4b924c';
 if(forCards){
     bod.innerHTML = ""
 }
