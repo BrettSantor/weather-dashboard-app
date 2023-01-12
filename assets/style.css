@@ -1,0 +1,22 @@
+.oldCities{
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    border-bottom: solid rgb(218, 165, 32, .6);
+    border-radius: 15px;
+    background-color: paleturquoise;
+    color: rgb(218, 165, 32);
+}
+
+.card{
+    margin: 5px;
+    padding: 5px;
+    border-bottom: 4mm ridge rgb(218, 165, 32, .6);
+    border-radius: 15px;
+    border-color: goldenrod;
+    color: rgb(218, 165, 32);
+    background-color: paleturquoise;
+    text-align: center;
+    font-weight: bolder;
+    font-size: large;
+}
