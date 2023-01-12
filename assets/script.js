@@ -77,13 +77,23 @@ if(forCards){
            cardImg = document.createElement('img')
            cardImg.src = 'http://openweathermap.org/img/wn/'+ Icon + '@2x.png'
               forCards = document.createElement('div');
+              dateHead = document.createElement('h3')
+              forCardsP1 = document.createElement('p')
+              forCardsP2 = document.createElement('p')
+              forCardsP3 = document.createElement('p')
+              unixStamp = datrArr[j].dt;
+              forDate = dayjs.unix(unixStamp)
+                dateHead.textContent = forDate.format('ddd DD')
+            //   forCardsp4 = document.createElement('p')
+            //   forCardsp5 = document.createElement('p')
              forCards.classList.add('card');
             forCards.innerHTML = ' Temperature: ' + datrArr[j].main.temp + '\u00B0 F';
-            forCardsP = document.createElement('p')
-             forCardsP.innerHTML = ' Feels Like: ' + datrArr[j].main.feels_like + '\u00B0 F';
+             forCardsP1.textContent = ' Humidity: ' + datrArr[j].main.humidity+'%';
+             forCardsP2.textContent = ' Feels Like: ' + datrArr[j].main.feels_like + '\u00B0 F';
+             forCardsP3.textContent = 'Wind: ' + datrArr[j].wind.speed + 'mph';
             
-             forCards.append(cardImg)
-             forCards.append(forCardsP)
+             forCards.append(dateHead, cardImg)
+             forCards.append(forCardsP1, forCardsP2, forCardsP3);
             
              bod.appendChild(forCards);
            }
@@ -95,7 +105,13 @@ if(forCards){
     event.preventDefault();
          var location = event.target[0].value;
             console.log(location);
-    if (location){
+    if (!storeCity.includes(location)){
+        //fix mispelled city entry
+        newbtn = document.createElement('button');
+        newbtn.setAttribute('value', location);
+        newbtn.textContent = location;
+        newbtn.classList.add('oldCities')
+        pastCity.appendChild(newbtn);
         currCity = {city: location};
         storeCity.push(currCity);
         localStorage.setItem('cityObj', JSON.stringify(storeCity));

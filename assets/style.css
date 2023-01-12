@@ -8,6 +8,14 @@
     color: rgb(218, 165, 32);
 }
 
+.btn{
+    border: none;
+    border-radius: 15px;
+    background-color: #EC6E4C;
+    color: #48484A;
+    border-bottom: solid #48484A;
+}
+
 .card{
     margin: 5px;
     padding: 5px;
