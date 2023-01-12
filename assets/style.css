@@ -1,3 +1,17 @@
+
+#topHeader{
+    margin-bottom: 5px;
+    background: linear-gradient(to right, paleturquoise, white);
+    /* background-color: aqua; */
+    border-radius: 15px;
+    border-bottom: 4mm ridge rgb(218, 165, 32, .6);
+    color: #48484A;
+    height: 20%;
+}
+.breeze{
+    color: #EC6E4C;
+}
+
 .oldCities{
     padding: 5px;
     margin: 5px;
